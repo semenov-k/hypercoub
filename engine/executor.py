@@ -21,6 +21,7 @@ class Worker(threading.Thread):
         - Fill map with local compmap.py
         - Run builder with map
         """
+        # TODO: Replace thread code with independent objects
         compmap_spec = importlib.util.spec_from_file_location(
             'compmap',
             os.path.join(self._compmap_path, 'compmap.py')
